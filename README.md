@@ -1,8 +1,17 @@
 # TASK-1-Competitive-Programming
-Name - Identical Sandals
-
+Name -
+```
+Identical Sandals
+```
 Problem Statement - 
-Wing C3 planned to go JK Temple all wearing their sandals. They left their sandals at gate of the Temple. After coming back from temple as all sandals were identical in design and colors so they wore each other sandals. After coming back to Wing they wanted to return sandals to original owner but they have their MTH101 class so help them to sort in in minimum swaps.
+```
+Wing C3 planned to visit JK Temple and wore their sandals for the trip.
+However, upon reaching the temple, they had to leave their sandals at the entrance.
+When they returned from the temple, they realized that all the sandals were identical in design and color,
+so they unintentionally wore each other's sandals.
+Now, back at Wing C3, they want to return the sandals to their original owners.
+However, they have a class, MTH101, to attend. Can you assist them in sorting the sandals with the fewest
+possible swaps?
 
 Example- 
 
@@ -11,15 +20,19 @@ Example-
 2 1
 
 1st Person has 2nd person's sandal in right leg so one swap is enough.
+```
 
-Input - 
+Input(In Latex text) - 
+```
 First Line of Input contains $n$  ($1 \le n \le 3 \cdot10^5$) --- Number of people 
 
 Next $n$ lines contains two numbers $a$ and $b$ ($1 \le a \le 3 \cdot 10^5$ , $1 \le b \le 3 
 \cdot 10^5$) --- Where $ith$ line contains $a_i$ which is the left sandals of $ith$ person and $b_i$ which is the right sandals of $ith$ person.
-
-Output - For each test Case, print the minimum number of swaps to give sandals back to their owners.
-
+```
+Output - 
+```
+For each test Case, print the minimum number of swaps to give sandals back to their owners.
+```
 Generating test cases as txt files using this -
 ```cpp
 #include <bits/stdc++.h>
