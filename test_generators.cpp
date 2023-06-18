@@ -4,7 +4,7 @@ using namespace std;
 #define sz(x) ((int)(x).size())
 #define all(x) (x).begin(), (x).end()
 #define v32 vector<int>
-#define MAX 30000
+#define MAX 80000
 void shuffle(v32 &arr, int n)
 {
     for (int i = n - 1; i >= 1; i--)
@@ -22,7 +22,7 @@ int main()
     freopen(x, "w", stdout);
 
     srand(time(NULL));
-    int temp = (rand() + 20000) % MAX;
+    int temp =(rand()+2)%MAX;
     cout << temp << "\n";
     v32 vec1(temp);
     v32 vec2(temp);
