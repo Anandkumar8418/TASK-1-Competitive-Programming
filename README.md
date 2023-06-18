@@ -142,6 +142,6 @@ int main()
 
 
 Link for Polygon Problem - 
-
-[Polygon Link](https://polygon.codeforces.com/p3zgUTF/whitedevil/main)
-
+```
+https://polygon.codeforces.com/p3zgUTF/whitedevil/main
+```
