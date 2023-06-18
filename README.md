@@ -24,9 +24,9 @@ Example-
 
 Input(In Latex text) - 
 ```
-First Line of Input contains n  (1 <= n <= 8*10^4) --- Number of people 
+First Line of Input contains n  (1 <= n <= 8*10^4) - Number of people 
 
-Next $n$ lines contains two numbers a and b (1 <= a <= 8*10^4 , 1 <= b <= 8*10^4 ) ---
+Next $n$ lines contains two numbers a and b (1 <= a <= 8*10^4 , 1 <= b <= 8*10^4 ) -
 Where $ith$ line contains a_i which is the left sandals of ith person and b_i which is the right sandals of ith person.
 ```
 Output - 
