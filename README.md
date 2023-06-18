@@ -24,10 +24,10 @@ Example-
 
 Input(In Latex text) - 
 ```
-First Line of Input contains $n$  ($1 \le n \le 3 \cdot10^5$) --- Number of people 
+First Line of Input contains n  (1 <= n <= 8*10^4) --- Number of people 
 
-Next $n$ lines contains two numbers $a$ and $b$ ($1 \le a \le 3 \cdot 10^5$ , $1 \le b \le 3 
-\cdot 10^5$) --- Where $ith$ line contains $a_i$ which is the left sandals of $ith$ person and $b_i$ which is the right sandals of $ith$ person.
+Next $n$ lines contains two numbers a and b (1 <= a <= 8*10^4 , 1 <= b <= 8*10^4 ) ---
+Where $ith$ line contains a_i which is the left sandals of ith person and b_i which is the right sandals of ith person.
 ```
 Output - 
 ```
@@ -35,13 +35,17 @@ For each test Case, print the minimum number of swaps to give sandals back to th
 ```
 Generating test cases as txt files using this -
 ```cpp
+
+// For generating edge testcases I manually set the temp to 80000,70000 etc.
+
+
 #include <bits/stdc++.h>
 #include <stdio.h>
 using namespace std;
 #define sz(x) ((int)(x).size())
 #define all(x) (x).begin(), (x).end()
 #define v32 vector<int>
-#define MAX 30000
+#define MAX 80000
 void shuffle(v32 &arr, int n)
 {
     for (int i = n - 1; i >= 1; i--)
@@ -59,7 +63,7 @@ int main()
     freopen(x, "w", stdout);
 
     srand(time(NULL));
-    int temp = (rand() + 20000) % MAX;
+    int temp = (rand()+2)%MAX;
     cout << temp << "\n";
     v32 vec1(temp);
     v32 vec2(temp);
@@ -82,6 +86,8 @@ int main()
 
 Solution in C++ - 
 ```cpp
+
+
 #include <bits/stdc++.h>
 using namespace std;
 #define all(x) (x).begin(), (x).end()
@@ -91,7 +97,6 @@ using namespace std;
 #define pb push_back
 #define rep(i, a, b) for (int i = a; i < b; i++)
 
-
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -99,45 +104,56 @@ int main()
 
     int n;
     cin >> n;
-    vector<pii> vec;
+    vector<pair<pii, int>> inputvec;
+    vector<pair<pii, int>> SortingbyRight;
     for (int i = 0; i < n; i++)
     {
         int a, b;
         cin >> a >> b;
         pii p = {a, b};
-        vec.pb(p);
+        pair<pii, int> p2 = {p, i + 1};
+        inputvec.pb(p2);
+        pii temppair = {b, a};
+        pair<pii, int> temppair2 = {temppair, i + 1};
+        SortingbyRight.pb(temppair2);
+    }
+    vector<pair<pii, int>> SortingbyLeft = inputvec;
+    sort(all(SortingbyLeft));
+    v32 leftleg(n);
+    for (int i = 0; i < n; i++)
+    {
+        leftleg[i] = SortingbyLeft[i].second;
+    }
+    sort(all(SortingbyRight));
+    v32 rightleg(n);
+    for (int i = 0; i < n; i++)
+    {
+        rightleg[i] = SortingbyRight[i].second;
     }
     int count1 = 0;
     for (int i = 0; i < n; i++)
     {
-        if (vec[i].first != i + 1)
+        if (leftleg[i] != i + 1)
         {
-            for (int j = i + 1; j < n; j++)
-            {
-                if (vec[j].first == i + 1)
-                {
-                    count1++;
-                    vec[j].first = vec[i].first;
-                    vec[i].first = i + 1;
-                }
-            }
+            auto it = find(all(leftleg), i + 1);
+            int index = it - leftleg.begin();
+            leftleg[index] = leftleg[i];
+            leftleg[i] = i + 1;
+            count1++;
         }
-        if (vec[i].second != i + 1)
+        if (rightleg[i] != i + 1)
         {
-            for (int j = i + 1; j < n; j++)
-            {
-                if (vec[j].second == i + 1)
-                {
-                    count1++;
-                    vec[j].second = vec[i].second;
-                    vec[i].second = i + 1;
-                }
-            }
+            auto it2 = find(all(rightleg), i + 1);
+            int index2 = it2 - rightleg.begin();
+            rightleg[index2] = rightleg[i];
+            rightleg[i] = i + 1;
+            count1++;
         }
     }
-
     cout << count1;
 }
+
+
 ```
 
 
