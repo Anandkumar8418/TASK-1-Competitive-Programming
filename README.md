@@ -157,10 +157,6 @@ int main()
 ```
 
 
-Link for Polygon Problem - 
-```
-https://polygon.codeforces.com/p3zgUTF/whitedevil/main
-```
 
 In this problem the easy way will be in O(N^2) but the constraints will not allow this.
 
@@ -245,4 +241,9 @@ int main()
     }
     cout << count1;
 }
+```
+
+Link for Polygon Problem - 
+```
+https://polygon.codeforces.com/p3zgUTF/whitedevil/main
 ```
