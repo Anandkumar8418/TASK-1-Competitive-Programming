@@ -1,9 +1,9 @@
 # TASK-1-Competitive-Programming
-Name -
+# Name -
 ```
 Identical Sandals
 ```
-Problem Statement - 
+# Problem Statement - 
 ```
 Wing C3 planned to visit JK Temple and wore their sandals for the trip.
 However, upon reaching the temple, they had to leave their sandals at the entrance.
@@ -22,18 +22,18 @@ Example-
 1st Person has 2nd person's sandal in right leg so one swap is enough.
 ```
 
-Input(In Latex text) - 
+# Input(In Latex text) - 
 ```
 First Line of Input contains n  (1 <= n <= 8*10^4) - Number of people 
 
 Next $n$ lines contains two numbers a and b (1 <= a <= 8*10^4 , 1 <= b <= 8*10^4 ) -
 Where $ith$ line contains a_i which is the left sandals of ith person and b_i which is the right sandals of ith person.
 ```
-Output - 
+# Output - 
 ```
 For each test Case, print the minimum number of swaps to give sandals back to their owners.
 ```
-Generating test cases as txt files using this -
+# Generating test cases as txt files using this -
 ```cpp
 
 // For generating edge testcases I manually set the temp to 80000,70000 etc.
@@ -84,7 +84,7 @@ int main()
 }
 ```
 
-Solution in C++ - 
+# Solution in C++ - 
 ```cpp
 
 
@@ -157,7 +157,7 @@ int main()
 ```
 
 
-
+# Editorial
 In this problem the easy way will be in O(N^2) but the constraints will not allow this.
 
 ```
@@ -242,8 +242,8 @@ int main()
     cout << count1;
 }
 ```
-
-Link for Polygon Problem - 
+# Polygon
+### Link for Polygon Problem - 
 ```
 https://polygon.codeforces.com/p3zgUTF/whitedevil/main
 ```
